@@ -1,0 +1,10 @@
+---
+-
+  environment:
+    AWS_ACCESS_KEY_ID:  {{ access }}
+    AWS_SECRET_ACCESS_KEY: {{ secret }}
+  hosts: localhost
+  name: Launching an EC2 Instance
+  gather_facts: true 
+  roles: 
+    - Rdsinstance

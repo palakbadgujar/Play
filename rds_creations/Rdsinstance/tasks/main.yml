@@ -1,0 +1,23 @@
+--- 
+- name: Launching an EC2 Instance
+  rds:
+    command: create
+    instance_name: mysqldatabase
+    db_engine: "{{ db_engine }}"
+    size: 10
+    region: "{{ region }}"
+    instance_type: db.m1.small
+    username: "{{ username }}"
+    password: "{{ password }}"
+    publicly_accessible: yes
+    multi_zone: yes
+    tags:
+       Name: DBinstanceTag
+- name: Launching an EC2 Instance
+  rds:
+    command: replicate
+    instance_name: DBinstanceReplica
+    source_instance: mysqldatabase
+    wait: yes
+    wait_timeout: 50000
+    region: "{{ region }}"

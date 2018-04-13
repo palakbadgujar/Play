@@ -1,0 +1,6 @@
+---
+# vars file for ansible-role-sqlserver
+region: us-west-2
+username: mysql_admin
+password: 1nsecure
+db_engine: MySQL
