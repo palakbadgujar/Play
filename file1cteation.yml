@@ -4,5 +4,5 @@
   tasks:
    - name: file creation
      file:
-       path: /home/ubuntu/palakfile
+       path: /root/palakfile
        state: touch
