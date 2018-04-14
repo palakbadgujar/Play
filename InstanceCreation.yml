@@ -17,7 +17,7 @@
            region: "{{ region }}"
            key_name: "{{ keypair }}"
            count: 1
-           state: destroy
+           state: present
            group: "{{ security_group }}"
            wait: true
            vpc_subnet_id: subnet-b97883c0
